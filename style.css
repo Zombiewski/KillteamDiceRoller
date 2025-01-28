@@ -1,0 +1,74 @@
+body {
+    
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+button {
+    border: 0;
+    border-radius: 10px;
+    display: block;
+    font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 10px auto 0;
+    outline: 0;
+    padding: 12px 17px;
+    touch-action: manipulation;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+h3 {
+    width: 100%;
+    text-align: center;
+}
+
+.clicked {
+    filter: opacity(0.4) drop-shadow(0 0 0 red);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.diceImg {
+    max-height: 50px;
+}
+
+.hidden {
+    display: none;
+}
+
+.sectionHead {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 10px 0 0 0;
+}
+
+.stat {
+    width: 50px;
+    text-align: center;
+}
+
+.wrapper > * {
+    flex: 1 100%;
+}
+
+#atkResults, #defResults {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#logo {
+    display: block;
+    max-width: 300px;
+    margin: 0 auto 0 auto;
+}
