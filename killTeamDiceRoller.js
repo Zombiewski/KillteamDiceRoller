@@ -33,7 +33,7 @@ const diceImg = document.getElementsByClassName("diceImg");
 const defDiceImg = document.getElementsByClassName("defDiceImg");
 const atkDiceImg = document.getElementsByClassName("atkDiceImg");
 
-const critImage = 'file:///C:/Users/jkenney/Desktop/Personal/Games/Kill%20Team/Kill%20Team%20Dice%20Roller/Images/6.jpg';
+const critImage = '/Images/6.jpg';
 
 // ATTACKER STATS
 let atkVal = 0;
@@ -379,16 +379,16 @@ function rollDice(num) {
 function changeNumberOfDice(numOfDice) {
     let addedDice = "";
     for (i = 0; i < numOfDice; i++) {
-        addedDice += '<img src="Images/1.jpg" class="diceImg atkDiceImg">';
+        addedDice += '<img src="/Images/1.jpg" class="diceImg atkDiceImg">';
     }
     atkDice.innerHTML = addedDice;
 }
 
 function coverChange() {
     if (document.getElementById("shootCOVER").value == "yes") {
-        defDice.innerHTML = "<img src='Images/5.jpg' class='diceImg'><img src='Images/1.jpg' class='diceImg'><img src='Images/1.jpg' class='diceImg'>"
+        defDice.innerHTML = "<img src='/Images/5.jpg' class='diceImg'><img src='/Images/1.jpg' class='diceImg'><img src='/Images/1.jpg' class='diceImg'>"
     } else {
-        defDice.innerHTML = "<img src='Images/1.jpg' class='diceImg'><img src='Images/1.jpg' class='diceImg'><img src='Images/1.jpg' class='diceImg'>"
+        defDice.innerHTML = "<img src='/Images/1.jpg' class='diceImg'><img src='/Images/1.jpg' class='diceImg'><img src='/Images/1.jpg' class='diceImg'>"
     }
 }
 
@@ -397,20 +397,20 @@ function updateDice(atkResultsArr, defResultsArr) {
     let addedDice = "";
     for (let i = 0; i < atkResultsArr.length; i++) {
         // console.log("atkResultsArr[i] = " + atkResultsArr[i]);
-        addedDice += '<img src="Images/'+ atkResultsArr[i] + '.jpg" class="diceImg atkDiceImg">';
+        addedDice += '<img src="/Images/'+ atkResultsArr[i] + '.jpg" class="diceImg atkDiceImg">';
     }
     document.getElementById("atkDice").innerHTML = addedDice;
 
     // UPDATE DEF DICE
     addedDice = "";
     if (document.getElementById("shootCOVER").value == "yes") {
-        addedDice += '<img src="Images/5.jpg" class="diceImg">';
+        addedDice += '<img src="/Images/5.jpg" class="diceImg">';
         for (let i = 0; i < defResultsArr.length; i++) {
-            addedDice += '<img src="Images/'+ defResultsArr[i] + '.jpg" class="diceImg defDiceImg">';
+            addedDice += '<img src="/Images/'+ defResultsArr[i] + '.jpg" class="diceImg defDiceImg">';
         }
     } else {
         for (let i = 0; i < defResultsArr.length; i++) {
-            addedDice += '<img src="Images/'+ defResultsArr[i] + '.jpg" class="diceImg defDiceImg">';
+            addedDice += '<img src="/Images/'+ defResultsArr[i] + '.jpg" class="diceImg defDiceImg">';
         }
     }
     document.getElementById("defDice").innerHTML = addedDice;
